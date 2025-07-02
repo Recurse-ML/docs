@@ -12,6 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Catch bugs before they happen',
+    // TODO: Add SVG artwork here
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
@@ -21,6 +22,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Easy integration with existing projects',
+    // TODO: Add SVG artwork here
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
@@ -30,6 +32,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Built by developers for developers',
+    // TODO: Add SVG artwork here
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
