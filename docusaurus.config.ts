@@ -46,17 +46,25 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          id: 'github-app',
+          path: 'docs/github-app',
+          routeBasePath: 'github-app'
+        }, docs: {
+          sidebarPath: './sidebars.ts',
+          id: 'rml-cli',
+          path: 'docs/rml-cli',
+          routeBasePath: 'rml-cli',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ['rss', 'atom'],
+        //     xslt: true,
+        //   },
+        //   onInlineTags: 'warn',
+        //   onInlineAuthors: 'warn',
+        //   onUntruncatedBlogPosts: 'warn',
+        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -105,7 +113,7 @@ const config: Config = {
             },
             {
               label: 'RML CLI Documentation',
-              to: '/docs/github-app/',
+              to: '/docs/rml-cli/',
             },
           ],
         },
