@@ -5,9 +5,13 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Recurse ML Docs',
+  title: 'Recurse ML | Documentation',
   tagline: 'Catch the bugs your tests miss',
   favicon: 'img/favicon.ico',
+  customFields: {
+    shortTitle: 'Recurse ML',
+  },
+
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -61,12 +65,13 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    // TODO: Replace with your Recurse ML social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Recurse ML Docs',
       logo: {
         alt: 'Recurse ML Logo',
+        // TODO: Replace with Recurse ML logo
         src: 'img/logo.svg',
       },
       items: [
@@ -95,8 +100,12 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'GitHub App Documentation',
+              to: '/docs/github-app/',
+            },
+            {
+              label: 'RML CLI Documentation',
+              to: '/docs/github-app/',
             },
           ],
         },
@@ -104,16 +113,16 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Discord',
+              href: 'https://discord.gg/AREwNQfy',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/company/recurse-ml/',
             },
             {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://x.com/',
             },
           ],
         },
@@ -122,16 +131,16 @@ const config: Config = {
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: 'https://blog.recurse.ml/',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/recurse-ml',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Recurse ML`,
     },
     prism: {
       theme: prismThemes.github,
