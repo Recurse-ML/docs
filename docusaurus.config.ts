@@ -76,12 +76,12 @@ const config: Config = {
       },
       items: [
         {
-          to: '/docs/github-app/',
+          to: 'github-app/',
           label: 'GitHub App',
           position: 'left',
         },
         {
-          to: '/docs/rml-cli/',
+          to: 'rml-cli/',
           label: 'RML CLI',
           position: 'left',
         },

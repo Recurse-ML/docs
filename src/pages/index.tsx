@@ -20,12 +20,12 @@ function HomepageHeader() {
         <div className={styles.buttons} style={{ gap: '1rem' }}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/rml-cli">
             RML CLI Docs
           </Link>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/github-app">
             GitHub App Docs
           </Link>
         </div>
