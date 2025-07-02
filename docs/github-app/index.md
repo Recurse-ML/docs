@@ -1,8 +1,5 @@
 ---
-id: index
-slug: /
 title: Introduction
-sidebar_position: 0
 ---
 
 ### Welcome to the Recurse ML documentation.
@@ -13,4 +10,3 @@ Looking for a quick overview? Head to What is RML?
 Ready to dive in? Jump to Quickstart or start Installing.
 
 If you get stuck, reach out via Help & Support.
-

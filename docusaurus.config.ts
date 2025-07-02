@@ -39,32 +39,27 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'rml-cli',
+        path: 'docs/rml-cli',
+        routeBasePath: 'rml-cli',
+        sidebarPath: './sidebars.ts',
+        lastVersion: 'current',
+      }]
+  ],
   presets: [
     [
       'classic',
       {
         docs: {
+          routeBasePath: 'github-app',
           sidebarPath: './sidebars.ts',
-          id: 'github-app',
           path: 'docs/github-app',
-          routeBasePath: 'github-app'
-        }, docs: {
-          sidebarPath: './sidebars.ts',
-          id: 'rml-cli',
-          path: 'docs/rml-cli',
-          routeBasePath: 'rml-cli',
+          lastVersion: 'current',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -84,12 +79,12 @@ const config: Config = {
       },
       items: [
         {
-          to: 'github-app/',
+          to: '/github-app/',
           label: 'GitHub App',
           position: 'left',
         },
         {
-          to: 'rml-cli/',
+          to: '/rml-cli/',
           label: 'RML CLI',
           position: 'left',
         },
@@ -109,11 +104,11 @@ const config: Config = {
           items: [
             {
               label: 'GitHub App Documentation',
-              to: '/docs/github-app/',
+              to: '/github-app/',
             },
             {
               label: 'RML CLI Documentation',
-              to: '/docs/rml-cli/',
+              to: '/rml-cli/',
             },
           ],
         },
