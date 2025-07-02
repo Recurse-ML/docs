@@ -36,7 +36,7 @@ rml file.py --from main --to feature
 
 Compare changes to `file.py` between the `main` and `feature` branches.
 
----
+***
 
 ## CLI Flags
 
