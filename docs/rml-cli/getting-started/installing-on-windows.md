@@ -1,5 +1,5 @@
 ---
-title: Installing on Windows
+title: ⚠️ Installing on Windows
 ---
 
 ## Coming Soon

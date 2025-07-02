@@ -7,12 +7,10 @@ Get up and running with RML in just a few steps. This guide will show you how to
 
 ## 1. Install RML
 
-RML can be installed on Linux, macOS, and Windows, or used via Docker. Choose the method that works best for your environment:
+RML can be installed on Linux and macOS. Choose the method that works best for your environment:
 
 - [Installing on Linux](../getting-started/installing-on-linux)
 - [Installing on macOS](../getting-started/installing-on-macos)
-- [Installing on Windows](../getting-started/installing-on-windows)
-- [Installing with Docker](../getting-started/installing-with-docker)
 
 For the sake of this quickstart, we will use macOS as an example. If you are using a different operating system, please refer to the appropriate installation guide.
 
