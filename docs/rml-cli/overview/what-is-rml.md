@@ -3,7 +3,10 @@ title: What is RML?
 sidebar_position: 0
 ---
 
-RML is a tool for detecting bugs in source code by analyzing changes made within a Git repository. It is designed to integrate seamlessly into the developer workflow, requiring minimal setup and producing actionable insights based on code modifications.
+RML is a command-line tool that performs static analysis on code changes inside a Git repository. It's built to detect bugs introduced by recent edits and report them before those changes are committed.
+
+Once installed, RML can be run on any file in a Git repo. It analyzes the difference between two Git states—typically your working directory and `HEAD` - and highlights only the issues related to what was changed.
+
 
 ## Purpose
 
@@ -30,4 +33,4 @@ The tool is designed to be as unobtrusive as possible. Once installed, developer
 
 RML is useful in a wide range of development workflows. Whether you're making small tweaks to a file or working on a larger feature branch, RML provides a quick way to check your changes for potential bugs before committing them. It works especially well as a last-minute safeguard before pushing code or opening a pull request.
 
-RML is not intended to replace full-code static analyzers. Instead, it complements them by focusing on the most recent changes, offering fast and relevant feedback during active development.
+RML is not intended to replace full-code static analyzers. Instead, it complements them by focusing on the most recent changes, to offer fast and relevant feedback during development.

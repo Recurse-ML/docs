@@ -2,7 +2,7 @@
 title: Custom Rules
 ---
 
-The `custom_rules` section of the `.recurseml.yaml` config file allows you to define your own rules that tailor how RML analyzes specific parts of your codebase. These rules help you enforce project-specific patterns, coding guidelines, or restrictions beyond RML's default behavior.
+The `custom_rules` section of the `.recurseml.yaml` config file allows you to define your own rules that tailor how Recurse ML analyzes specific parts of your codebase. These rules help you enforce project-specific patterns, coding guidelines, or restrictions beyond Recurse ML's default behavior.
 
 ## Purpose
 
