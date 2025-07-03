@@ -1,29 +1,44 @@
 ---
 title: Config File Overview
+sidebar_position: 0
 ---
 
-## `.recurseml.yml` Overview
+The `.recurseml.yaml` config file allows you to customize how RML analyzes your repository. This section provides an overview of the configuration file, its structure, and how to use it effectively with the CLI.
 
-RML will **soon** support a project-level configuration file named `.recurseml.yml`, located at the root of your repository. This file is already recognized by the [RecurseML GitHub App](https://github.com/apps/recurseml), which uses it to configure automated checks on pull requests.
+## File Name and Location
 
-However, as of now, **RML itself does not read or use this file**. Local CLI runs of RML ignore `.recurseml.yml`, and no configuration is loaded from it.
+- The configuration file must be named `.recurseml.yaml`.
+- It can be placed anywhere in your repository. RML will search recursively from the project root and use the **first** `.recurseml.yaml` file it finds.
+- If multiple config files exist, only the first match is used.
+- We recommend placing it in the root of your repository for clarity and consistency.
 
-## Current Status
+## Supported Configuration
 
-- **File name:** `.recurseml.yml`
-- **Location:** Repository root (convention)
-- **Used by CLI:** ❌ Not yet
-- **Used by GitHub App:** ✅ Yes
+The config file currently supports the following key(s):
 
-## What to Expect
+| Key            | Type            | Required | Default | Description                               |
+| -------------- | --------------- | -------- | ------- | ----------------------------------------- |
+| `custom_rules` | list of objects | No       | `[]`    | Custom rules for targeting specific files |
 
-Support for `.recurseml.yml` in the CLI is planned and will be introduced in a future release. Once supported, this file will allow you to configure default behavior for RML runs, such as which files to analyze, how to handle certain error types, and output preferences.
+## Custom Rules
 
-This documentation will be updated with schema details and usage examples once the feature is live.
+The `custom_rules` setting allows you to define rules that apply only to certain files or file types using glob patterns. Each rule consists of a name, a description, and a list of file match patterns.
 
-To be notified about updates, please join the [Recurse ML Discord server](https://discord.gg/AREwNQfy).
+To learn how to define and use these rules, see the [Custom Rules documentation](./custom-rules.md).
 
-## Summary
+## Example Configuration
 
-- You do **not** need `.recurseml.yml` to use RML locally.
-- Support for the `.recurseml.yml` file in the CLI is coming soon.
+```yaml
+custom_rules:
+  - name: "require-todo-comments-to-have-ticket-id"
+    applicable_files:
+      - "*.py"
+      - "*.ts"
+    description: "All TODO comments must include a reference to a ticket ID (e.g., TODO: REFACTOR X-12345 - fix loop)"
+```
+
+## Error Handling
+
+- If the config file is missing, default values are used.
+- If the YAML is invalid or any rules are malformed, they will be ignored without affecting the rest of the analysis.
+- Valid sections of the config will still be applied even if others fail.
