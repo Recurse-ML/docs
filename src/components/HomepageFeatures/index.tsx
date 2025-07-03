@@ -11,9 +11,9 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Catch bugs before they happen',
+    title: 'Find breaking changes',
     // TODO: Add SVG artwork here
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/bug-zoom.svg').default,
     description: (
       <>
         Understand the impact of every change you make. Recurse ML helps you spot potential bugs before they hit production
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Easy integration with existing projects',
+    title: 'Catch API & library misuse',
     // TODO: Add SVG artwork here
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
