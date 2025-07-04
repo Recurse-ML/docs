@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Catch API & library misuse',
     // TODO: Add SVG artwork here
-    imageUrl: '/img/bug-hunting.png',
+    imageUrl: '/img/chatgpt-temp1.png',
     description: (
       <>
         Misused a function? Passed an incorrect type? Forgot a required param? We've got you.
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Detect major and minor mistakes',
     // TODO: Add SVG artwork here
-    imageUrl: '/img/bug-hunting.png',
+    imageUrl: '/img/chatgpt-temp2.png',
     description: (
       <>
         Everyone slips up. Recurse ML makes sure those mistakes never make it to production.      </>
