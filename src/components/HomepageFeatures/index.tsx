@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  imageUrl?: string;
   description: ReactNode;
 };
 
@@ -13,44 +13,48 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Find breaking changes',
     // TODO: Add SVG artwork here
-    Svg: require('@site/static/img/bug-zoom.svg').default,
+    imageUrl: '/img/bug-hunting.png',
     description: (
       <>
-        Understand the impact of every change you make. Recurse ML helps you spot potential bugs before they hit production
-      </>
+        See how your changes affect the rest of your code, and catch what breaks      </>
     ),
   },
   {
     title: 'Catch API & library misuse',
     // TODO: Add SVG artwork here
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    imageUrl: '/img/bug-hunting.png',
     description: (
       <>
-        Get started in minutes! Recurse ML works out of the box with your current stack - no bloated configs or messy setup required
+        Misused a function? Passed an incorrect type? Forgot a required param? We've got you.
       </>
     ),
   },
   {
-    title: 'Built by developers for developers',
+    title: 'Detect major and minor mistakes',
     // TODO: Add SVG artwork here
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    imageUrl: '/img/bug-hunting.png',
     description: (
       <>
-        Designed with a developer-first mindset. We believe that identifying bugs should be easy and intuitive, not a chore.
-      </>
+        Everyone slips up. Recurse ML makes sure those mistakes never make it to production.      </>
     ),
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature(props: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {props.imageUrl && (
+          <img
+            className={styles.featureImage}
+            src={props.imageUrl}
+            alt={props.title}
+          />
+        )}
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+        <Heading as="h3">{props.title}</Heading>
+        <p>{props.description}</p>
       </div>
     </div>
   );
