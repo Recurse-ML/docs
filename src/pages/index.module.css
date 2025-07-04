@@ -11,6 +11,7 @@
   background-color: #141414;
 }
 
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
@@ -21,4 +22,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+[data-theme='dark'] .heroBanner {
+  background-color: #fff;
 }
