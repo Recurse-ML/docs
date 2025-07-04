@@ -14,14 +14,6 @@ The fastest way to get help is by joining our Discord community. You can ask que
 
 [Join the Discord](https://discord.gg/AREwNQfy)
 
-### 📧 Email Support
-
-For more formal inquiries or if you prefer not to use Discord, you can reach us by email:
-
-```
-debug@recurse.ml
-```
-
 ### 🐙 GitHub (Docs Issues & Contributions)
 
 If you've spotted a mistake in the docs or want to contribute:
