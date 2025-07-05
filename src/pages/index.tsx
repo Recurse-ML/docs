@@ -21,6 +21,13 @@ function HomepageHeader() {
           className={styles["header__text-secondary"]}
         >{HOME_PAGE_SECONDARY_TEXT}</p>
       </div>
+      <div className={styles["header__art-container"]}>
+        <img
+
+          src="/img/bang.svg"
+          alt="Recurse ML Logo"
+          className={styles["header__art-image"]} />
+      </div>
     </header>
   );
 }
