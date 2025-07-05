@@ -1,9 +1,7 @@
 import type { ReactNode } from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import Heading from '@theme/Heading';
 
 import styles from './index.module.scss';
 
@@ -23,7 +21,6 @@ function HomepageHeader() {
       </div>
       <div className={styles["header__art-container"]}>
         <img
-
           src="/img/bang.svg"
           alt="Recurse ML Logo"
           className={styles["header__art-image"]} />
@@ -32,9 +29,52 @@ function HomepageHeader() {
   );
 }
 
+interface ProjectButtonProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+  href: string;
+}
+
+function ProjectButton(props: ProjectButtonProps) {
+  return (
+    <Link
+      className={styles.projectButton}
+      to={props.href}>
+      <div className={styles.projectButton__imageContainer}>
+        <img
+          src={props.imageUrl}
+          alt={props.title}
+          className={styles.projectButtonImage} />
+      </div>
+      <div className={styles.projectButton__content} >
+        <h3>{props.title}</h3>
+        <p>{props.description}</p>
+      </div>
+    </Link>
+  );
+}
+
 function HomepageProjects() {
   return (
-    <></>
+    <main className={styles.main}>
+      <h2>Finding bugs wherever you are</h2>
+      <div className={styles.projectButton__container}>
+
+        <ProjectButton
+          title="Recurse ML GitHub App"
+          description="AI-powered code reviews for every pull request. Recurse ML scans your diffs, detects bugs, and leaves comments or status checks."
+          imageUrl="/img/github-app-logo.svg"
+          href="/github-app" />
+        <ProjectButton
+          title="RML CLI"
+          description="Bug detection on the go. A simple CLI tool to identify bugs directly from your local repository. Just upload your changes and get AI-powered analysis."
+          imageUrl="/img/rml-cli-logo.svg"
+          href="/rml-cli" />
+
+      </div>
+
+    </main>
   );
 }
 
