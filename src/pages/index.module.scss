@@ -1,13 +1,24 @@
-$text-color: #242424;
-$light-accent: rgb(255, 230, 230);
+:root {
+  --text-color: #242424;
+  --grad-start: rgb(255, 255, 255);
+  --grad-end: rgb(255, 230, 230);
+}
+
+[data-theme='dark'] {
+  --text-color: #f0f0f0;
+  --grad-start: rgb(12, 12, 12);
+  --grad-end: rgb(52, 52, 52);
+
+  .projectButton img {
+    filter: invert(1);
+  }
+}
 
 .header {
   display: flex;
   height: 512px;
   position: relative;
-  background: linear-gradient(52deg,
-      white 0%,
-      $light-accent 100%);
+  background: linear-gradient(52deg, var(--grad-start) 0%, var(--grad-end) 100%);
 
   &__text {
     &-container {
@@ -18,7 +29,7 @@ $light-accent: rgb(255, 230, 230);
       text-align: left;
       padding: 4rem;
       max-width: 100%;
-      color: $text-color;
+      color: var(--text-color);
     }
 
     &-primary {
@@ -64,40 +75,41 @@ $light-accent: rgb(255, 230, 230);
   padding: 2rem;
 
   h2 {
-    color: $text-color;
+    color: var(--text-color);
     font-size: 2rem;
     font-weight: 700;
-
+    margin-bottom: 3rem;
   }
 }
 
 .projectButton {
   flex: 1 1 100%;
-  border-radius: .5rem;
-  height: 12rem;
+  border-radius: 0.5rem;
+  min-height: 12rem;
   display: flex;
   flex-direction: row;
   border: 1px solid rgb(230, 230, 230);
 
   &:hover {
-    border-color: $text-color;
+    border-color: var(--text-color);
     text-decoration: none;
   }
 
   img {
-    height: 100%;
+    height: auto;
+    max-height: 10rem;
     object-fit: contain;
     padding: 1rem 1rem;
   }
 
   h3 {
     font-size: 2.5rem;
-    color: $text-color;
+    color: var(--text-color);
   }
 
   p {
     font-size: 1rem;
-    color: $text-color;
+    color: var(--text-color);
     padding: 0;
     margin: 0;
   }
@@ -113,7 +125,6 @@ $light-accent: rgb(255, 230, 230);
     align-items: center;
     justify-content: center;
     width: 6rem;
-    height: 100%;
     flex: 0 0 6rem;
   }
 
@@ -125,18 +136,15 @@ $light-accent: rgb(255, 230, 230);
     justify-content: space-between;
     padding: 1rem 1rem;
   }
-
-
 }
 
 @media (max-width: 1400px) {
   .projectButton {
-    height: 10rem;
+    min-height: 12rem;
     flex: 0 0 auto;
 
     &__container {
       flex-direction: column;
     }
-
   }
 }
