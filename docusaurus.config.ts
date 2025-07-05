@@ -40,6 +40,7 @@ const config: Config = {
     locales: ['en'],
   },
   plugins: [
+    'docusaurus-plugin-sass',
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -48,7 +49,8 @@ const config: Config = {
         routeBasePath: 'rml-cli',
         sidebarPath: './sidebars.ts',
         lastVersion: 'current',
-      }]
+      }],
+
   ],
   presets: [
     [
@@ -61,7 +63,7 @@ const config: Config = {
           lastVersion: 'current',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/custom.scss',
         },
       } satisfies Preset.Options,
     ],

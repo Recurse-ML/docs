@@ -3,34 +3,31 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 
-import styles from './index.module.css';
+import styles from './index.module.scss';
+
+const HOME_PAGE_SECONDARY_TEXT = "Recurse ML catches bugs that tests and static analysers miss. We understand external libraries and complex internal dependencies. Our users ship fast without compromising production quality.";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {String(siteConfig.customFields.shortTitle ?? siteConfig.title)}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons} style={{ gap: '1rem' }}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/rml-cli">
-            RML CLI Docs
-          </Link>
-          <Link
-            className="button button--secondary button--lg"
-            to="/github-app">
-            GitHub App Docs
-          </Link>
-        </div>
+    <header className={styles.header}>
+      <div className={styles["header__text-container"]}>
+        <h1
+          className={styles["header__text-primary"]}
+        >NEXT-GEN<br />STATIC ANALYSIS</h1>
+        <p
+          className={styles["header__text-secondary"]}
+        >{HOME_PAGE_SECONDARY_TEXT}</p>
       </div>
     </header>
+  );
+}
+
+function HomepageProjects() {
+  return (
+    <></>
   );
 }
 
@@ -41,9 +38,7 @@ export default function Home(): ReactNode {
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
-      {/* <main>
-        <HomepageFeatures />
-      </main> */}
+      <HomepageProjects />
     </Layout>
   );
 }
