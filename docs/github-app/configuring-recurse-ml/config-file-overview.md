@@ -22,9 +22,10 @@ The config file currently supports the following keys:
 | `custom_rules`         | list of objects | No       | `[]`    | Custom rules for targeting specific files         |
 
 ## Report Status Checks
+
 The `report_status_checks` setting determines whether RML will report analysis results as GitHub status checks on pull requests.
 
-To learn more about this feature, see the [Status Checks documentation](./status-checks.md).
+To learn more about this feature, see the [Report Status Checks documentation](./report-status-checks.md).
 
 ## Custom Rules
 
