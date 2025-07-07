@@ -1,6 +1,7 @@
 ---
 title: Quickstart
-sidebar_position: 1
+slug: /
+sidebar_position: 0
 ---
 
 Recurse ML is available as a GitHub App that automatically reviews pull requests for bugs using AI-powered static analysis. This guide walks you through how to install the app and start using it within your repositories.
