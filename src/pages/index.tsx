@@ -58,18 +58,18 @@ function ProjectButton(props: ProjectButtonProps) {
 function HomepageProjects() {
   return (
     <main className={styles.main}>
-      <h2>Finding bugs wherever you are</h2>
+      <h2>Products</h2>
       <div className={styles.projectButton__container}>
 
         <ProjectButton
           title="Recurse ML GitHub App"
-          description="AI-powered code reviews for every pull request. Recurse ML scans your diffs, detects bugs, and leaves comments or status checks."
-          imageUrl="/img/github-app-logo.svg"
+          description="Automated bug detection for every pull request. Recurse ML scans your diffs, catches bugs your tests miss, and leaves comments and status checks."
+          imageUrl="/img/gh-logo.svg"
           href="/github-app" />
         <ProjectButton
           title="RML CLI"
-          description="Bug detection on the go. A simple CLI tool to identify bugs directly from your local repository. Just upload your changes and get AI-powered analysis."
-          imageUrl="/img/rml-cli-logo.svg"
+          description="Identify bugs in your local code changes. Works with all code - human-written or AI-generated."
+          imageUrl="/img/rml-logo.svg"
           href="/rml-cli" />
 
       </div>

@@ -78,14 +78,12 @@
     color: var(--text-color);
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 3rem;
   }
 }
 
 .projectButton {
   flex: 1 1 100%;
   border-radius: 0.5rem;
-  min-height: 12rem;
   display: flex;
   flex-direction: row;
   border: 1px solid rgb(230, 230, 230);
@@ -96,55 +94,50 @@
   }
 
   img {
-    height: auto;
-    max-height: 10rem;
-    object-fit: contain;
-    padding: 1rem 1rem;
+    width: 4rem;
+    aspect-ratio: 1;
   }
 
   h3 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: var(--text-color);
+    padding-top: 1rem;
+    margin: 0;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--text-color);
     padding: 0;
     margin: 0;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
   }
 
   &__container {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   &__imageContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 6rem;
-    flex: 0 0 6rem;
+    padding: 1.5rem;
   }
 
   &__content {
     flex: 1;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem 1rem;
+    justify-content: center;
   }
 }
 
 @media (max-width: 1400px) {
-  .projectButton {
-    min-height: 12rem;
-    flex: 0 0 auto;
-
-    &__container {
-      flex-direction: column;
-    }
+  .projectButton__container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
