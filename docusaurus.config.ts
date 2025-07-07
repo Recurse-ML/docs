@@ -40,6 +40,7 @@ const config: Config = {
     locales: ['en'],
   },
   plugins: [
+    'docusaurus-plugin-sass',
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -48,7 +49,8 @@ const config: Config = {
         routeBasePath: 'rml-cli',
         sidebarPath: './sidebars.ts',
         lastVersion: 'current',
-      }]
+      }],
+
   ],
   presets: [
     [
@@ -61,7 +63,7 @@ const config: Config = {
           lastVersion: 'current',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/custom.scss',
         },
       } satisfies Preset.Options,
     ],
@@ -74,8 +76,10 @@ const config: Config = {
       title: 'Recurse ML Docs',
       logo: {
         alt: 'Recurse ML Logo',
-        // TODO: Replace with Recurse ML logo
-        src: 'img/logo.svg',
+        src: 'img/recurse-logo-light.svg',
+        srcDark: 'img/recurse-logo-dark.svg',
+        height: 24,
+        width: 24,
       },
       items: [
         {
@@ -134,7 +138,7 @@ const config: Config = {
           items: [
             {
               label: 'Blog',
-              to: 'https://blog.recurse.ml/',
+              to: 'https://blog.recurse.ml',
             },
             {
               label: 'GitHub',
