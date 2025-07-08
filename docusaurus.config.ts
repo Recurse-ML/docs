@@ -74,6 +74,19 @@ const config: Config = {
   themeConfig: {
     // TODO: Replace with your Recurse ML social card
     image: 'img/recurse-social-card.jpg',
+    metadata: [
+      { name: 'keywords', content: 'static analysis, bug detection, AI code review, Recurse ML, code quality, GitHub App, CLI, documentation' },
+      { name: 'description', content: 'Recurse ML documentation. Next-gen static analysis for code quality, bug detection, and AI-powered code review.' },
+      { property: 'og:title', content: 'Recurse ML | Documentation' },
+      { property: 'og:description', content: 'Catch the bugs your tests miss. Next-gen static analysis for code quality and bug detection.' },
+      { property: 'og:image', content: 'https://docs.recurse.ml/img/recurse-social-card.jpg' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://docs.recurse.ml' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Recurse ML | Documentation' },
+      { name: 'twitter:description', content: 'Catch the bugs your tests miss. Next-gen static analysis for code quality and bug detection.' },
+      { name: 'twitter:image', content: 'https://docs.recurse.ml/img/recurse-social-card.jpg' }
+    ],
     navbar: {
       title: 'Recurse ML Docs',
       logo: {
