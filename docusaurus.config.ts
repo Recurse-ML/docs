@@ -73,7 +73,7 @@ const config: Config = {
 
   themeConfig: {
     // TODO: Replace with your Recurse ML social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/recurse-social-card.jpg',
     navbar: {
       title: 'Recurse ML Docs',
       logo: {
