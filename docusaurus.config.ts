@@ -87,6 +87,24 @@ const config: Config = {
       { name: 'twitter:description', content: 'Catch the bugs your tests miss. Next-gen static analysis for code quality and bug detection.' },
       { name: 'twitter:image', content: 'https://docs.recurse.ml/img/recurse-social-card.jpg' }
     ],
+    headTags: [
+      {
+        tagName: 'script',
+        attributes: {
+          type: 'application/ld+json',
+        },
+        innerHTML: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "name": "Recurse ML Documentation",
+          "url": "https://docs.recurse.ml",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Recurse ML"
+          }
+        }),
+      },
+    ],
     navbar: {
       title: 'Recurse ML Docs',
       logo: {

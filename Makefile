@@ -9,8 +9,8 @@ build:
 	npm run build
 
 upload:
-	@echo "⬆️  Uploading to GCS..."
-	cd build && gsutil -m cp -r * gs://$(BUCKET_NAME)/
+	@echo "⬆️  Uploading (with gzip compression)..."
+	gsutil -m cp -z html,css,js -r build/* gs://$(BUCKET_NAME)/
 
 invalidate:
 	@echo "♻️  Invalidating CDN cache..."
