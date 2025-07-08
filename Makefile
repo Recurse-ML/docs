@@ -10,6 +10,7 @@ build:
 
 upload:
 	@echo "⬆️  Uploading (with gzip compression)..."
+	gsutil -m rm -r gs://$(BUCKET_NAME)/**.gz || true
 	gsutil -m cp -z html,css,js -r build/* gs://$(BUCKET_NAME)/
 
 invalidate:
