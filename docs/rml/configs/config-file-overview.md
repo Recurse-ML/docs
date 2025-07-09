@@ -18,18 +18,18 @@ The config file currently supports the following key(s):
 
 | Key            | Type            | Required | Default | Description                               |
 | -------------- | --------------- | -------- | ------- | ----------------------------------------- |
-| `custom_rules` | list of objects | No       | `[]`    | Custom rules for targeting specific files |
+| `rules` | list of objects | No       | `[]`    | Rules for targeting specific files |
 
-## Custom Rules
+## Rules
 
-The `custom_rules` setting allows you to define rules that apply only to certain files or file types using glob patterns. Each rule consists of a name, a description, and a list of file match patterns.
+The `rules` setting allows you to define rules that apply only to certain files or file types using glob patterns. Each rule consists of a name, a description, and a list of file match patterns.
 
-To learn how to define and use these rules, see the [Custom Rules documentation](./rules.mdx).
+To learn how to define and use these rules, see the [Rules documentation](./rules.mdx).
 
 ## Example Configuration
 
 ```yaml
-custom_rules:
+rules:
   - name: "require-todo-comments-to-have-ticket-id"
     applicable_files:
       - "*.py"

@@ -26,21 +26,21 @@ When `report_status_checks` is enabled:
 
 ## Compatibility
 
-This setting works independently of other configuration options. You can use it alongside `custom_rules` or with the default RML behavior.
+This setting works independently of other configuration options. You can use it alongside `rules` or with the default RML behavior.
 
 ## Example
 
 ```yaml
 report_status_checks: true
 
-custom_rules:
+rules:
   - name: "no-todo-comments"
     applicable_files:
       - "*.js"
     description: "Disallow TODO comments in production code"
 ```
 
-With this configuration, any bugs or violations of the custom rule will trigger a failed status check on the pull request.
+With this configuration, any bugs or violations of the rule will trigger a failed status check on the pull request.
 
 ## Default Behavior
 

@@ -19,7 +19,7 @@ The config file currently supports the following keys:
 | Key                    | Type            | Required | Default | Description                                       |
 | ---------------------- | --------------- | -------- | ------- | ------------------------------------------------- |
 | `report_status_checks` | boolean         | No       | `false` | Whether to report results as GitHub status checks |
-| `custom_rules`         | list of objects | No       | `[]`    | Custom rules for targeting specific files         |
+| `rules`         | list of objects | No       | `[]`    | Rules for targeting specific files         |
 
 ## Report Status Checks
 
@@ -27,18 +27,18 @@ The `report_status_checks` setting determines whether RML will report analysis r
 
 To learn more about this feature, see the [Report Status Checks documentation](./report-status-checks.md).
 
-## Custom Rules
+## Rules
 
-The `custom_rules` setting allows you to define rules that apply only to certain files or file types using glob patterns. Each rule consists of a name, a description, and a list of file match patterns.
+The `rules` setting allows you to define rules that apply only to certain files or file types using glob patterns. Each rule consists of a name, a description, and a list of file match patterns.
 
-To learn how to define and use these rules, see the [Custom Rules documentation](./rules.mdx).
+To learn how to define and use these rules, see the [Rules documentation](./rules.mdx).
 
 ## Example Configuration
 
 ```yaml
 report_status_checks: true
 
-custom_rules:
+rules:
   - name: "require-todo-comments-to-have-ticket-id"
     applicable_files:
       - "*.py"
