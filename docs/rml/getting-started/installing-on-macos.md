@@ -28,4 +28,4 @@ If the command returns `🐞 Running rml version {version}`, RML has been instal
 
 ## Troubleshooting
 
-If you encounter any issues during installation, please check out the [help and support](../help-and-support.md) section.
+If you encounter any issues during installation, please check out the [help and support](../help-and-support.mdx) section.
