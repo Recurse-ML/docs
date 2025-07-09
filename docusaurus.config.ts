@@ -46,9 +46,9 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'rml-cli',
-        path: 'docs/rml-cli',
-        routeBasePath: 'rml-cli',
+        id: 'rml',
+        path: 'docs/rml',
+        routeBasePath: 'rml',
         sidebarPath: './sidebars.ts',
         lastVersion: 'current',
       }],
@@ -59,9 +59,9 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: 'github-app',
+          routeBasePath: 'gh',
           sidebarPath: './sidebars.ts',
-          path: 'docs/github-app',
+          path: 'docs/gh',
           lastVersion: 'current',
         },
         theme: {
@@ -116,12 +116,12 @@ const config: Config = {
       },
       items: [
         {
-          to: '/github-app/',
+          to: '/gh/',
           label: 'GitHub App',
           position: 'left',
         },
         {
-          to: '/rml-cli/',
+          to: '/rml/',
           label: 'RML CLI',
           position: 'left',
         },
@@ -141,11 +141,11 @@ const config: Config = {
           items: [
             {
               label: 'GitHub App Documentation',
-              to: '/github-app/',
+              to: '/gh/',
             },
             {
               label: 'RML CLI Documentation',
-              to: '/rml-cli/',
+              to: '/rml/',
             },
           ],
         },

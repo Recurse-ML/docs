@@ -65,12 +65,12 @@ function HomepageProjects() {
           title="Recurse ML GitHub App"
           description="Automated bug detection for every pull request. Recurse ML scans your diffs, catches bugs your tests miss, and leaves comments and status checks."
           imageUrl="/img/gh-logo.svg"
-          href="/github-app" />
+          href="/gh" />
         <ProjectButton
           title="RML CLI"
           description="Identify bugs in your local code changes. Works with all code - human-written or AI-generated."
           imageUrl="/img/rml-logo.svg"
-          href="/rml-cli" />
+          href="/rml" />
 
       </div>
 
