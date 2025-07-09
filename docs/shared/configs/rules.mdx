@@ -6,7 +6,7 @@ The `rules` section of the `.recurseml.yaml` config file allows you to define ad
 They are best used for explicitly expressing and automatically enforcing project-specific conventions.
 They can range from style suggestions, such as variable naming patterns, to sensitive directories that need additional verification (e.g. payments).
 
-Rules are verified against modified code and reported in PR (for [GitHub App](/gh/)) or in CLI output (for [`rml`](/rml/)).
+Rules are verified against modified code and reported in the PR (for [GitHub App](/gh/)) or in the CLI output (for [`rml`](/rml/)).
 
 ## Purpose
 
@@ -14,28 +14,34 @@ Rules let you:
 
 - Explicitly specify codebase conventions
 - Highlight files/directories that need additional analysis
-- ⚡️**Pro tip:** use rules for effective onboarding.
-  New team members can learn about codebase conventions through Recurse ML's comments.
-  Add links to relevant blog posts inside of rule definitions.
-  They appear [JIT](https://www.netlingo.com/word/just-in-time-jit.php) when they are relevant.
 
-## Location and Discovery
+⚡️**Pro tip:** use rules for effective onboarding.
+New team members can learn about codebase conventions through Recurse ML's comments.
+Add links to relevant blog posts inside of rule definitions.
+They appear [JIT](https://www.netlingo.com/word/just-in-time-jit.php) when they are relevant.
 
-The `.recurseml.yaml` file:
+## Quickstart
 
-- Must be named `.recurseml.yaml`
-- Can be placed anywhere in your repository
-- Is located by a recursive search from the project root
-- Only the **first** config file found is used
+1. Create a directory in your project for rules (e.g. `.rules/`).
+2. Add your rule directory to `.recurseml.yaml`.
+    See [Config File](#config-file) section.
+4. Create a rule you want Recurse ML to enforce (e.g. `.rules/meaningful_comments.mdc`).
+    Just describing the rule in plain markdown will work.
+    See [Rule File](#rule-file) section bellow for more details.
 
-## Configuration
+## Config File
 
+_[Complete `.recurseml.yaml` config file docs.](./config-file-overview)_
+
+In `.recurseml.yaml` add a `rules` field.
 The `rules` field can be configured in two ways:
 
 ### Single Directory
+
 ```yaml
 rules: .cursor/rules
 ```
+
 
 ### Multiple Directories
 ```yaml
@@ -46,10 +52,10 @@ rules:
 
 Recurse ML reads all `.md` and `.mdc` files from the specified directories.
 
-# Rule Title
+## Rule File
 
-Rule description and requirements go here in Markdown format.
-```
+Just specifying the rule in plain markdown will work.
+For more control, here this section contains complete configuration options.
 
 ### Frontmatter Fields
 
@@ -61,19 +67,8 @@ Rule description and requirements go here in Markdown format.
 
 ## Examples
 
-### Single Directory Configuration
-```yaml
-rules: .cursor/rules
-```
-
-### Multiple Directories Configuration
-```yaml
-rules:
-  - .rules/clean_code/
-  - .project_rules/
-```
-
 ### Example Rule File
+
 ```md
 ---
 Name: require-docstrings
@@ -91,6 +86,7 @@ All Python functions must include comprehensive docstrings that describe:
 ```
 
 ### Example Rule with Multiple File Patterns
+
 ```md
 ---
 Name: no-todo-comments
