@@ -154,7 +154,7 @@ const config: Config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/AREwNQfy',
+              href: 'https://discord.gg/mVbG4CBaRg',
             },
             {
               label: 'LinkedIn',
@@ -162,7 +162,7 @@ const config: Config = {
             },
             {
               label: 'X',
-              href: 'https://x.com/',
+              href: 'https://x.com/RecurseML',
             },
           ],
         },
