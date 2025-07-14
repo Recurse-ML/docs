@@ -88,6 +88,12 @@ const config: Config = {
       }),
     },
   ],
+  scripts: [
+    {
+      src: '/firebase-init.js',
+      type: 'module',
+    },
+  ],
 
   themeConfig: {
     // TODO: Replace with your Recurse ML social card
