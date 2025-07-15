@@ -29,7 +29,7 @@ const config: Config = {
   organizationName: 'Recurse-ML', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   deploymentBranch: 'gh-pages',
-  trailingSlash: false,
+  trailingSlash: true,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
