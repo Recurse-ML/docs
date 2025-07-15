@@ -8,10 +8,6 @@ const config: Config = {
   title: 'Recurse ML | Documentation',
   tagline: 'Catch the bugs your tests miss',
   favicon: 'img/favicon.ico',
-  customFields: {
-    shortTitle: 'Recurse ML',
-  },
-
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
