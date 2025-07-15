@@ -7,7 +7,7 @@ The `.recurseml.yaml` config file allows you to customize how RML analyzes your 
 
 ## File Name and Location
 
-- The configuration file must be named `.recurseml.yaml`.
+- The configuration file must be named `.recurseml.yaml` or `.recurseml.yml`.
 - It can be placed anywhere in your repository. RML will search recursively from the project root and use the **first** `.recurseml.yaml` file it finds.
 - If multiple config files exist, only the first match is used.
 - We recommend placing it in the root of your repository for clarity and consistency.
@@ -19,7 +19,7 @@ The config file currently supports the following keys:
 | Key                    | Type            | Required | Default | Description                                       |
 | ---------------------- | --------------- | -------- | ------- | ------------------------------------------------- |
 | `report_status_checks` | boolean         | No       | `false` | Whether to report results as GitHub status checks |
-| `rules`         | list of objects | No       | `[]`    | Rules for targeting specific files         |
+| `rules`                | list of objects | No       | `[]`    | Rules for targeting specific files                |
 
 ## Report Status Checks
 
