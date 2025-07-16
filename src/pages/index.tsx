@@ -5,6 +5,7 @@ import Layout from '@theme/Layout';
 
 import styles from './index.module.scss';
 
+const META_DESCRIPTION = "Documentation for Recurse ML - an AI-powered static analysis tool that finds bugs tests and linters miss. Understands external libraries and complex codebases so you can ship fast with confidence. Works in GitHub and CLI. Can be used by Claude Code and Cursor.";
 const HOME_PAGE_SECONDARY_TEXT = "Recurse ML catches bugs that tests and static analysers miss. We understand external libraries and complex internal dependencies. Our users ship fast without compromising production quality.";
 
 function HomepageHeader() {
@@ -82,7 +83,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description={META_DESCRIPTION}>
       <HomepageHeader />
       <HomepageProjects />
     </Layout>
