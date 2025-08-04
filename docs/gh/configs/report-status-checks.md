@@ -26,21 +26,20 @@ When `report_status_checks` is enabled:
 
 ## Compatibility
 
-This setting works independently of other configuration options. You can use it alongside `rules` or with the default RML behavior.
+This setting works independently of other configuration options. You can use it alongside custom [rules](/gh/configs/rules) or with the default RML behavior.
 
 ## Example
 
 ```yaml
 report_status_checks: true
 
-rules:
-  - name: "no-todo-comments"
-    applicable_files:
-      - "*.js"
-    description: "Disallow TODO comments in production code"
+# Rules directory containing .mdc files
+rules: .rules/
 ```
 
-With this configuration, any bugs or violations of the rule will trigger a failed status check on the pull request.
+With this configuration, any bugs detected by RML or violations of custom rules will trigger a failed status check on the pull request.
+
+For more information on creating custom rules, see the [Rules documentation](/gh/configs/rules).
 
 ## Default Behavior
 
