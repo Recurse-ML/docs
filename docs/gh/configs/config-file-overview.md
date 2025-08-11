@@ -16,10 +16,10 @@ The `.recurseml.yaml` config file allows you to customize how RML analyzes your 
 
 The config file currently supports the following keys:
 
-| Key                    | Type                   | Required | Default | Description                                       |
-| ---------------------- | ---------------------- | -------- | ------- | ------------------------------------------------- |
-| `report_status_checks` | boolean                | No       | `false` | Whether to report results as GitHub status checks |
-| `rules`                | string or list of strings | No       | `[]`    | Path(s) to rule directories                       |
+| Key                    | Type                | Required | Default | Description                                       |
+| ---------------------- | ------------------- | -------- | ------- | ------------------------------------------------- |
+| `report_status_checks` | boolean             | No       | `false` | Whether to report results as GitHub status checks |
+| `rules`                | string  \| string[] | No       | `[]`    | Path(s) to rule directories                       |
 
 ## Report Status Checks
 
@@ -29,7 +29,7 @@ To learn more about this feature, see the [Report Status Checks documentation](.
 
 ## Rules
 
-The `rules` setting allows you to specify directories containing rule files in `.mdc` format. Each rule file can define custom checks and constraints for your codebase.
+The `rules` setting allows you to specify directories containing rule files in the `.mdc` format. Each rule file can define custom checks and constraints for your codebase.
 
 To learn how to define and use these rules, see the [Rules documentation](./rules.mdx).
 

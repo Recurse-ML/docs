@@ -16,13 +16,13 @@ The `.recurseml.yaml` config file allows you to customize how RML analyzes your 
 
 The config file currently supports the following key(s):
 
-| Key     | Type                   | Required | Default | Description                        |
-| ------- | ---------------------- | -------- | ------- | ---------------------------------- |
-| `rules` | string or list of strings | No       | `[]`    | Path(s) to rule directories |
+| Key     | Type                 | Required | Default | Description                 |
+| ------- | -------------------- | -------- | ------- | --------------------------- |
+| `rules` | `string` \| string[] | No       | `[]`    | Path(s) to rule directories |
 
 ## Rules
 
-The `rules` setting allows you to specify directories containing rule files in `.mdc` format. Each rule file can define custom checks and constraints for your codebase.
+The `rules` setting allows you to specify directories containing rule files in the `.mdc` format. Each rule file can define custom checks and constraints for your codebase.
 
 To learn how to define and use these rules, see the [Rules documentation](./rules.mdx).
 
