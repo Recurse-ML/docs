@@ -16,10 +16,10 @@ The `.recurseml.yaml` config file allows you to customize how RML analyzes your 
 
 The config file currently supports the following keys:
 
-| Key                    | Type            | Required | Default | Description                                       |
-| ---------------------- | --------------- | -------- | ------- | ------------------------------------------------- |
-| `report_status_checks` | boolean         | No       | `false` | Whether to report results as GitHub status checks |
-| `rules`                | list of objects | No       | `[]`    | Rules for targeting specific files                |
+| Key                    | Type                | Required | Default | Description                                       |
+| ---------------------- | ------------------- | -------- | ------- | ------------------------------------------------- |
+| `report_status_checks` | boolean             | No       | `false` | Whether to report results as GitHub status checks |
+| `rules`                | string  \| string[] | No       | `[]`    | Path(s) to rule directories                       |
 
 ## Report Status Checks
 
@@ -29,7 +29,7 @@ To learn more about this feature, see the [Report Status Checks documentation](.
 
 ## Rules
 
-The `rules` setting allows you to define rules that apply only to certain files or file types using glob patterns. Each rule consists of a name, a description, and a list of file match patterns.
+The `rules` setting allows you to specify directories containing rule files in the `.mdc` format. Each rule file can define custom checks and constraints for your codebase.
 
 To learn how to define and use these rules, see the [Rules documentation](./rules.mdx).
 
@@ -38,12 +38,13 @@ To learn how to define and use these rules, see the [Rules documentation](./rule
 ```yaml
 report_status_checks: true
 
-rules:
-  - name: "require-todo-comments-to-have-ticket-id"
-    applicable_files:
-      - "*.py"
-      - "*.ts"
-    description: "All TODO comments must include a reference to a ticket ID (e.g., TODO: REFACTOR X-12345 - fix loop)"
+# Single rules directory
+rules: .rules/
+
+# Or multiple directories
+# rules:
+#   - .rules/clean_code/
+#   - .project_rules/
 ```
 
 ## Error Handling

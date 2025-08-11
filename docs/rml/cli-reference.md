@@ -49,3 +49,13 @@ Compare changes to `file.py` between the `main` and `feature` branches.
 | `-md`, `--markdown` | Outputs results in markdown format. Ideal for LLM or programmatic use.        |
 
 You can combine these flags to tailor how RML analyzes your changes and how the results are formatted.
+
+---
+
+## Configuration
+
+RML supports project-specific configuration through `.recurseml.yaml` files. You can use configuration to define custom rules that enforce coding standards and project conventions.
+
+For detailed information about configuration options, see the [Config File Overview](/rml/configs/config-file-overview).
+
+To learn about creating custom rules, see the [Rules documentation](/rml/configs/rules).

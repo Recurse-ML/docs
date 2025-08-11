@@ -40,3 +40,11 @@ You do not need to run any CLI tools or configure CI workflows. Everything is ha
 ***
 
 🎉 Recurse ML is now installed and ready to start reviewing pull requests in your repository!
+
+## Next Steps
+
+Once you have Recurse ML up and running, you may want to:
+
+- Create custom [rules](/gh/configs/rules) to enforce project-specific coding standards
+- Configure [status checks](/gh/configs/report-status-checks) to integrate with your workflow
+- Review the complete [configuration options](/gh/configs/config-file-overview)
