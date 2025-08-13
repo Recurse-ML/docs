@@ -1,0 +1,27 @@
+# Recurse ML Documentation
+
+> Recurse ML is an AI-powered static analysis tool that catches bugs your tests miss. This documentation site provides comprehensive guides, examples, and references for using Recurse ML to detect breaking changes, prevent API misuse, and enforce custom coding rules through GitHub integration or CLI usage.
+
+Recurse ML offers two main ways to integrate static analysis into your development workflow: as a GitHub App for automated pull request reviews, or as a command-line tool for local development and CI/CD pipelines. The tool is designed to catch issues that traditional testing methods often miss, helping developers maintain code quality and prevent bugs from reaching production.
+
+## Getting Started
+
+- [RML CLI Quickstart](https://docs.recurse.ml/rml/): Get up and running with RML CLI in just a few steps, including installation guides for Linux and macOS
+- [GitHub App Quickstart](https://docs.recurse.ml/gh/): Install and configure the Recurse ML GitHub App to automatically review pull requests
+
+## Core Features
+
+- [RML CLI Reference](https://docs.recurse.ml/rml/cli-reference/): Complete command-line interface documentation and usage examples
+- [GitHub App Configuration](https://docs.recurse.ml/gh/configs/config-file-overview/): Set up and customize the Recurse ML GitHub App for your repositories
+- [Rules Configuration](https://docs.recurse.ml/rml/configs/rules/): Create custom rules to enforce project-specific coding standards and conventions
+- [Report Status Checks](https://docs.recurse.ml/gh/configs/report-status-checks/): Understand and configure how Recurse ML reports analysis results
+
+## Configuration
+
+- [Config File Overview](https://docs.recurse.ml/rml/configs/config-file-overview/): Learn about RML configuration files and their structure
+- [GitHub App Rules](https://docs.recurse.ml/gh/configs/rules/): Configure rules specifically for GitHub App usage
+
+## Help and Support
+
+- [RML Help and Support](https://docs.recurse.ml/rml/help-and-support/): Troubleshooting guides and support resources for RML CLI
+- [GitHub App Help](https://docs.recurse.ml/gh/help-and-support/): Support documentation for the Recurse ML GitHub App
