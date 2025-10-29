@@ -1,0 +1,65 @@
+---
+slug: /
+title: Getting Started
+sidebar_position: 0
+---
+# Quick Install
+
+**One-line install (macOS and Linux)**
+```
+curl -sSL https://storage.googleapis.com/remcp/install.sh | bash
+```
+📝 Next steps:
+1. Make sure `$HOME/.local/bin` is in your `PATH`. Add to `~/.bashrc` or `~/.zshrc`: 
+
+```export PATH="$HOME/.local/bin:$PATH"```
+
+2. Authenticate with GitHub: 
+
+```remcp auth```
+
+3. Add to Claude Code: 
+
+```claude mcp add recurse --scope user -- remcp serve```
+
+
+# Usage tips:
+
+## Configure claude code (recommended)
+
+```bash
+remcp configure claude
+```
+This installs a SessionStart hook that automatically reminds Claude to use remcp. This is a global configuration for claude.
+
+
+If you are not happy with the global setting, you can remove it using the following
+```bash
+remcp configure claude --remove
+```
+
+## Recurse prompt
+
+```
+$ /recurse:review_code Please implement access control on web api endpoints
+```
+The prompt is automatically available once you install remcp, and claude will start using Recurse MCP for code changes.
+
+
+## Project level configuration (manual)
+
+
+To help your AI agent automatically use remcp, add instructions to your agent's rules file:
+
+| MCP Client | Rules File Location |
+|------------|---------------------|
+| Claude Desktop/Code | `CLAUDE.md` |
+| VSCode Copilot | `.github/copilot-instructions.md` |
+| Cursor | `.cursorrules` or `.cursor/rules` |
+
+**Add this line to your rules file:**
+
+```
+Use Recurse MCP for code analysis: call init() before starting, sync() after changes, then check() for results.
+```
+

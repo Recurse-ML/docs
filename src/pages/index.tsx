@@ -71,6 +71,11 @@ function HomepageProjects() {
           description="Identify bugs in your local code changes. Works with all code - human-written or AI-generated."
           imageUrl="/img/rml-logo.svg"
           href="/rml" />
+        <ProjectButton
+          title="REMCP"
+          description="Model Context Protocol server for Recurse ML integration."
+          imageUrl="/img/mcp.png"
+          href="/remcp" />
 
       </div>
 
