@@ -1,0 +1,118 @@
+---
+title: Rules
+---
+
+The `rules` section of the `.recurseml.yaml` config file allows you to define additional checks that Recurse ML will perform.
+They are best used for explicitly expressing and automatically enforcing project-specific conventions.
+They can range from style suggestions, such as variable naming patterns, to sensitive directories that need additional verification (e.g. payments).
+
+Rules are verified against modified code and reported in the PR (for [GitHub App](/gh/)) or in the CLI output (for [`rml`](/rml/)).
+
+## Purpose
+
+Rules let you:
+
+- Explicitly specify codebase conventions
+- Highlight files/directories that need additional analysis
+
+⚡️**Pro tip:** use rules for effective onboarding.
+New team members can learn about codebase conventions through Recurse ML's comments.
+Add links to relevant blog posts inside of rule definitions.
+They appear [JIT](https://www.netlingo.com/word/just-in-time-jit.php) when they are relevant.
+
+## Quickstart
+
+1. Create a directory in your project for rules (e.g. `.rules/`).
+2. Add your rule directory to `.recurseml.yaml`.
+    See [Config File](#config-file) section.
+4. Create a rule you want Recurse ML to enforce (e.g. `.rules/meaningful_comments.mdc`).
+    Just describing the rule in plain markdown will work.
+    See [Rule File](#rule-file) section bellow for more details.
+
+## Config File
+
+_[Complete `.recurseml.yaml` config file docs.](../config-file-overview)_
+
+In `.recurseml.yaml` add a `rules` field.
+The `rules` field can be configured in two ways:
+
+### Single Directory
+
+```yaml
+rules: .cursor/rules
+```
+
+
+### Multiple Directories
+```yaml
+rules:
+  - .rules/clean_code/
+  - .project_rules/
+```
+
+Recurse ML reads all `.md` and `.mdc` files from the specified directories.
+
+## Rule File
+
+Just specifying the rule in plain markdown will work.
+For more control, here this section contains complete configuration options.
+
+### Frontmatter Fields
+
+| Field         | Type           | Required | Description                                     |
+| ------------- | -------------- | -------- | ----------------------------------------------- |
+| `Name`        | string         | No       | Rule name (defaults to filename if not provided) |
+| `Description` | string         | No       | Human-readable explanation of the rule           |
+| `Globs`       | string or list | No       | File patterns to match (applies to all files if not specified) |
+
+## Examples
+
+### Example Rule File
+
+```md
+---
+Name: require-docstrings
+Description: All Python functions must have docstrings
+Globs: "*.py"
+---
+
+# Python Docstring Requirements
+
+All Python functions must include comprehensive docstrings that describe:
+- Function purpose
+- Parameters and their types
+- Return values
+- Any exceptions that may be raised
+```
+
+### Example Rule with Multiple File Patterns
+
+```md
+---
+Name: no-todo-comments
+Description: Disallow TODO comments in production code
+Globs: 
+  - "*.js"
+  - "*.ts"
+  - "*.{py,java}"
+---
+
+# No TODO Comments
+
+TODO comments are not allowed in production code. Use proper issue tracking instead.
+```
+
+## Supported Glob Patterns
+
+The `Globs` field supports Unix shell-style wildcards and brace expansion:
+
+- `"*.py"` — All Python files
+- `"src/*.js"` — JS files in the `src` directory
+- `"src/**/utils/*.ts"` — Deeply nested TS utility files
+- `"*.{py,ts}"` — Python and TypeScript files using brace expansion
+- `"*.env"` — Hidden environment files
+
+## Default Behavior
+
+If no rules are provided, Recurse ML will perform its default analysis without any project-specific rules.
+

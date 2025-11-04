@@ -8,10 +8,6 @@ const config: Config = {
   title: 'Recurse ML | Documentation',
   tagline: 'Catch the bugs your tests miss',
   favicon: 'img/favicon.ico',
-  customFields: {
-    shortTitle: 'Recurse ML',
-  },
-
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -29,7 +25,7 @@ const config: Config = {
   organizationName: 'Recurse-ML', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   deploymentBranch: 'gh-pages',
-  trailingSlash: false,
+  trailingSlash: true,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -46,9 +42,9 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'rml-cli',
-        path: 'docs/rml-cli',
-        routeBasePath: 'rml-cli',
+        id: 'rml',
+        path: 'docs/rml',
+        routeBasePath: 'rml',
         sidebarPath: './sidebars.ts',
         lastVersion: 'current',
       }],
@@ -59,9 +55,9 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: 'github-app',
+          routeBasePath: 'gh',
           sidebarPath: './sidebars.ts',
-          path: 'docs/github-app',
+          path: 'docs/gh',
           lastVersion: 'current',
         },
         theme: {
@@ -116,12 +112,12 @@ const config: Config = {
       },
       items: [
         {
-          to: '/github-app/',
+          to: '/gh/',
           label: 'GitHub App',
           position: 'left',
         },
         {
-          to: '/rml-cli/',
+          to: '/rml/',
           label: 'RML CLI',
           position: 'left',
         },
@@ -141,11 +137,11 @@ const config: Config = {
           items: [
             {
               label: 'GitHub App Documentation',
-              to: '/github-app/',
+              to: '/gh/',
             },
             {
               label: 'RML CLI Documentation',
-              to: '/rml-cli/',
+              to: '/rml/',
             },
           ],
         },
@@ -154,7 +150,7 @@ const config: Config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/AREwNQfy',
+              href: 'https://discord.gg/mVbG4CBaRg',
             },
             {
               label: 'LinkedIn',
@@ -162,7 +158,7 @@ const config: Config = {
             },
             {
               label: 'X',
-              href: 'https://x.com/',
+              href: 'https://x.com/RecurseML',
             },
           ],
         },

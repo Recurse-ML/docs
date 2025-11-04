@@ -26,6 +26,14 @@ rml --version
 
 If the command returns `🐞 Running rml version {version}`, RML has been installed successfully and is ready to use.
 
+## Next Steps
+
+Now that RML is installed, you can:
+
+- Check out the [Quickstart guide](/rml/) to run your first analysis
+- Learn about [configuration options](/rml/configs/config-file-overview) 
+- Create custom [rules](/rml/configs/rules) for your project
+
 ## Troubleshooting
 
-If you encounter any issues during installation, please check out the [help and support](../help-and-support.md) section.
+If you encounter any issues during installation, please check out the [help and support](../help-and-support.mdx) section.

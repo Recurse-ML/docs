@@ -5,10 +5,10 @@ import Layout from '@theme/Layout';
 
 import styles from './index.module.scss';
 
+const META_DESCRIPTION = "Documentation for Recurse ML - an AI-powered static analysis tool that finds bugs tests and linters miss. Understands external libraries and complex codebases so you can ship fast with confidence. Works in GitHub and CLI. Can be used by Claude Code and Cursor.";
 const HOME_PAGE_SECONDARY_TEXT = "Recurse ML catches bugs that tests and static analysers miss. We understand external libraries and complex internal dependencies. Our users ship fast without compromising production quality.";
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={styles.header}>
       <div className={styles["header__text-container"]}>
@@ -65,12 +65,12 @@ function HomepageProjects() {
           title="Recurse ML GitHub App"
           description="Automated bug detection for every pull request. Recurse ML scans your diffs, catches bugs your tests miss, and leaves comments and status checks."
           imageUrl="/img/gh-logo.svg"
-          href="/github-app" />
+          href="/gh" />
         <ProjectButton
           title="RML CLI"
           description="Identify bugs in your local code changes. Works with all code - human-written or AI-generated."
           imageUrl="/img/rml-logo.svg"
-          href="/rml-cli" />
+          href="/rml" />
 
       </div>
 
@@ -83,7 +83,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description={META_DESCRIPTION}>
       <HomepageHeader />
       <HomepageProjects />
     </Layout>
