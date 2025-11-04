@@ -14,7 +14,7 @@ title: Installing on Linux
 To install RML, open your terminal and run the following command:
 
 ```bash
-curl install.recurse.ml | sh
+curl -L install.recurse.ml | sh
 ```
 
 This script will download and install the latest version of RML onto your system.
