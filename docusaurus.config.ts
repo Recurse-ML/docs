@@ -48,6 +48,15 @@ const config: Config = {
         sidebarPath: './sidebars.ts',
         lastVersion: 'current',
       }],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'remcp',
+        path: 'docs/remcp',
+        routeBasePath: 'remcp',
+        sidebarPath: './sidebars.ts',
+        lastVersion: 'current',
+      }],
 
   ],
   presets: [
@@ -119,6 +128,11 @@ const config: Config = {
         {
           to: '/rml/',
           label: 'RML CLI',
+          position: 'left',
+        },
+        {
+          to: '/remcp/',
+          label: 'REMCP',
           position: 'left',
         },
         // { to: '/blog', label: 'Blog', position: 'left' },
