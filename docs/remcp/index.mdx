@@ -25,7 +25,14 @@ curl -sSL https://storage.googleapis.com/remcp/install.sh | bash
 
 # Usage tips:
 
-## Configure claude code (recommended)
+## Recurse prompt (recommended)
+
+```
+$ /recurse:review_code Please implement access control on web api endpoints
+```
+The prompt is automatically available once you install remcp, and claude will start using Recurse MCP for code changes.
+
+## Configure claude code
 
 ```bash
 remcp configure claude
@@ -37,14 +44,6 @@ If you are not happy with the global setting, you can remove it using the follow
 ```bash
 remcp configure claude --remove
 ```
-
-## Recurse prompt
-
-```
-# In claude code
-$ /recurse:review_code Please implement access control on web api endpoints
-```
-The prompt is automatically available once you install remcp, and claude will start using Recurse MCP for code changes.
 
 
 ## Project level configuration (manual)
