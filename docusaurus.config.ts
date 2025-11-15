@@ -57,6 +57,15 @@ const config: Config = {
         sidebarPath: './sidebars.ts',
         lastVersion: 'current',
       }],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'spx',
+        path: 'docs/spx',
+        routeBasePath: 'spx',
+        sidebarPath: false,
+        lastVersion: 'current',
+      }],
 
   ],
   presets: [
