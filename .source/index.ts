@@ -1,0 +1,23 @@
+// @ts-nocheck -- skip type checking
+import * as rml_7 from "../content/rml/getting-started/installing-on-windows.md?collection=rml&hash=1763665631585"
+import * as rml_6 from "../content/rml/getting-started/installing-on-macos.md?collection=rml&hash=1763665631585"
+import * as rml_5 from "../content/rml/getting-started/installing-on-linux.md?collection=rml&hash=1763665631585"
+import * as rml_4 from "../content/rml/configs/rules.mdx?collection=rml&hash=1763665631585"
+import * as rml_3 from "../content/rml/configs/config-file-overview.md?collection=rml&hash=1763665631585"
+import * as rml_2 from "../content/rml/index.mdx?collection=rml&hash=1763665631585"
+import * as rml_1 from "../content/rml/help-and-support.mdx?collection=rml&hash=1763665631585"
+import * as rml_0 from "../content/rml/cli-reference.md?collection=rml&hash=1763665631585"
+import * as gh_5 from "../content/gh/configs/rules.mdx?collection=gh&hash=1763665631585"
+import * as gh_4 from "../content/gh/configs/report-status-checks.md?collection=gh&hash=1763665631585"
+import * as gh_3 from "../content/gh/configs/config-file-overview.md?collection=gh&hash=1763665631585"
+import * as gh_2 from "../content/gh/installation.md?collection=gh&hash=1763665631585"
+import * as gh_1 from "../content/gh/index.mdx?collection=gh&hash=1763665631585"
+import * as gh_0 from "../content/gh/help-and-support.mdx?collection=gh&hash=1763665631585"
+import * as remcp_0 from "../content/remcp/index.mdx?collection=remcp&hash=1763665631585"
+import * as spx_0 from "../content/spx/index.mdx?collection=spx&hash=1763665631585"
+import { _runtime } from "fumadocs-mdx/runtime/next"
+import * as _source from "../source.config"
+export const gh = _runtime.docs<typeof _source.gh>([{ info: {"path":"help-and-support.mdx","fullPath":"content/gh/help-and-support.mdx"}, data: gh_0 }, { info: {"path":"index.mdx","fullPath":"content/gh/index.mdx"}, data: gh_1 }, { info: {"path":"installation.md","fullPath":"content/gh/installation.md"}, data: gh_2 }, { info: {"path":"configs/config-file-overview.md","fullPath":"content/gh/configs/config-file-overview.md"}, data: gh_3 }, { info: {"path":"configs/report-status-checks.md","fullPath":"content/gh/configs/report-status-checks.md"}, data: gh_4 }, { info: {"path":"configs/rules.mdx","fullPath":"content/gh/configs/rules.mdx"}, data: gh_5 }], [{"info":{"path":"meta.json","fullPath":"content/gh/meta.json"},"data":{"title":"GitHub App","pages":["index","installation","configs","help-and-support"]}}, {"info":{"path":"configs/_category_.json","fullPath":"content/gh/configs/_category_.json"},"data":{}}])
+export const remcp = _runtime.docs<typeof _source.remcp>([{ info: {"path":"index.mdx","fullPath":"content/remcp/index.mdx"}, data: remcp_0 }], [{"info":{"path":"meta.json","fullPath":"content/remcp/meta.json"},"data":{"title":"REMCP","pages":["index"]}}])
+export const rml = _runtime.docs<typeof _source.rml>([{ info: {"path":"cli-reference.md","fullPath":"content/rml/cli-reference.md"}, data: rml_0 }, { info: {"path":"help-and-support.mdx","fullPath":"content/rml/help-and-support.mdx"}, data: rml_1 }, { info: {"path":"index.mdx","fullPath":"content/rml/index.mdx"}, data: rml_2 }, { info: {"path":"configs/config-file-overview.md","fullPath":"content/rml/configs/config-file-overview.md"}, data: rml_3 }, { info: {"path":"configs/rules.mdx","fullPath":"content/rml/configs/rules.mdx"}, data: rml_4 }, { info: {"path":"getting-started/installing-on-linux.md","fullPath":"content/rml/getting-started/installing-on-linux.md"}, data: rml_5 }, { info: {"path":"getting-started/installing-on-macos.md","fullPath":"content/rml/getting-started/installing-on-macos.md"}, data: rml_6 }, { info: {"path":"getting-started/installing-on-windows.md","fullPath":"content/rml/getting-started/installing-on-windows.md"}, data: rml_7 }], [{"info":{"path":"meta.json","fullPath":"content/rml/meta.json"},"data":{"title":"RML CLI","pages":["index","cli-reference","getting-started","configs","help-and-support"]}}, {"info":{"path":"configs/_category_.json","fullPath":"content/rml/configs/_category_.json"},"data":{}}, {"info":{"path":"getting-started/_category_.json","fullPath":"content/rml/getting-started/_category_.json"},"data":{}}])
+export const spx = _runtime.docs<typeof _source.spx>([{ info: {"path":"index.mdx","fullPath":"content/spx/index.mdx"}, data: spx_0 }], [{"info":{"path":"meta.json","fullPath":"content/spx/meta.json"},"data":{"title":"SPX","pages":["index"]}}])

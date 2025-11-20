@@ -3,10 +3,13 @@
 
 # Production
 /build
+/.next
+/out
 
 # Generated files
 .docusaurus
 .cache-loader
+.fumadocs
 
 # Misc
 .DS_Store
@@ -18,6 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Next.js
+next-env.d.ts
 
 .firebase
 .vscode
