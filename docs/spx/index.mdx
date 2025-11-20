@@ -79,7 +79,22 @@ my-spx-project/
 ├── .spx/               # Internal spx metadata (don't edit)
 │   └── prev_specs/     # Tracks changes between generations
 ├── out/                # Generated code appears here (auto-created on first gen)
+├── project.spx.toml    # Project configuration file
 └── .gitignore          # Pre-configured to ignore generated files
+```
+
+The `spx init` command will interactively prompt you for:
+- Project name
+- Location of the `claude` binary (defaults to `~/.local/bin/claude`)
+
+This information is saved in `project.spx.toml`:
+```toml
+[project]
+name = "microservice-footgun"
+version = "0.1.0"
+
+[spx]
+claude_code_bin = "~/.local/bin/claude"
 ```
 
 **What each directory does:**
@@ -105,11 +120,11 @@ Principles for writing effective specs:
 3. **Out of scope:** explicitly state what's out of scope for now and the limitations you're fine with at the current stage.
 
 
-#### `spx gen`
+#### `spx build`
 
-Once your spec is ready, generate the code:
+Once your spec is ready, build your system:
 ```bash
-spx gen
+spx build
 ```
 
 This command:
@@ -117,16 +132,14 @@ This command:
 - Compares them with the previous generation (if any)
 - Uses Claude Code CLI to generate or update code in `out/`
 - Creates/updates `out/build.sh` and `out/run.sh` scripts
-
-**First time:** Generates everything from scratch.
-
-**Subsequent runs:** Only updates what changed in your specs, preserving what still matches.
-
-#### `spx build
-
+- Runs `out/build.sh` to build the generated code
 - Sets up language-specific environments (virtualenv for Python, npm install for TypeScript, etc.)
 - Installs required libraries
 - Compiles code if necessary (e.g., for Rust or TypeScript)
+
+**First time:** Generates everything from scratch and builds it.
+
+**Subsequent runs:** Only updates what changed in your specs, preserving what still matches, then rebuilds
 
 #### `spx run`
 
@@ -146,8 +159,7 @@ You control your system architecture and behavior through specs, not by writing 
 ## Commands Reference
 
 - `spx init` - Initialize a new spx project
-- `spx gen` - Generate/update implementation code from specs
-- `spx build` - Build the generated code and install dependencies
+- `spx build` - Generate/update implementation code from specs and build it
 - `spx run [args]` - Execute your system (forwards args to your application)
 - `spx clean` - Remove all generated code and build artifacts
 
