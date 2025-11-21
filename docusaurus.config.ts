@@ -86,6 +86,23 @@ const config: Config = {
   ],
   headTags: [
     {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/img/icon.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/img/apple-icon.png',
+      },
+    },
+    {
       tagName: 'script',
       attributes: {
         type: 'application/ld+json',
