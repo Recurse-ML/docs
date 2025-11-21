@@ -1,0 +1,8 @@
+{
+  "title": "Configurations",
+  "pages": [
+    "config-file-overview",
+    "rules",
+    "report-status-checks"
+  ]
+}

@@ -1,0 +1,46 @@
+---
+title: Quickstart
+slug: /
+sidebar_position: 0
+---
+
+Recurse ML is available as a GitHub App that automatically reviews pull requests for bugs using AI-powered static analysis. This guide walks you through how to install the app and start using it within your repositories.
+
+This quickstart will show you how to install Recurse ML and run your first analysis as quickly as possible.
+
+## Example
+This quickstart will show you how to set up Recurse ML in your repo and then run your first analysis as quickly as possible. Below is the sort of output
+you can expect from Recurse ML when it finds an issue in your Pull Request:
+
+![Recurse ML GitHub App Example](/img/examples/recurse-ml-github-app-example.webp)
+
+## 1. Install Recurse ML
+
+To install the Recurse ML GitHub App:
+
+1. Go to the [Recurse ML GitHub App page](https://github.com/apps/recurseml).
+2. Click **Configure**.
+3. Choose where to install the app:
+   - Select your personal account, or
+   - Select an organization you belong to
+4. Select the repositories you want to use with Recurse ML:
+   - You can choose **All repositories**, or
+   - Manually select specific repositories
+5. Click **Install**.
+6. Complete the GitHub authentication flow if prompted.
+
+Once installed, the app will be active on the selected repositories.
+
+## 2. Open a new Pull Request
+
+After installing the Recurse ML GitHub App, you can start using it immediately. Just go ahead and create a new pull request in any of the repositories where the app is installed. After about a minute of processing, Recurse ML will return the analysis results.
+
+## 3. Optional: Configure Custom Rules
+
+Want to enforce project-specific conventions? You can create custom rules to check for coding standards, naming patterns, or highlight sensitive areas that need extra attention.
+
+To get started with custom rules, see the [Rules documentation](/gh/configs/rules).
+
+---
+
+🎉 That's it! Recurse ML is now monitoring your pull requests and helping catch bugs before they reach production.

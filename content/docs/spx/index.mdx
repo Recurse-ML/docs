@@ -1,0 +1,170 @@
+---
+title: spx
+---
+
+spx enables you to define, run, and modify complex backend systems using only markdown specifications.
+
+:::warning Early Preview
+spx is still rough around the edges.
+We'd love your feedback on how the spx development workflow compares to yours.
+
+Hit us up on [Discord](https://discord.gg/n3SsVDAW6U) or email me on armin (at) recurse (dot) ml.
+:::
+
+## Prerequisites
+
+Before using spx, ensure you have:
+
+- Claude Code CLI installed and available as `claude`.
+- Runtime for your chosen implementation language (Python, TypeScript, or Rust).
+    spx uses these languages as intermediary representations (IRs) to generate your actual implementation code.
+
+## Quickstart
+
+### 1. Download the spx Binary
+
+Download the appropriate binary for your system architecture:
+
+- **Linux x64:** [linux-x64](https://storage.googleapis.com/docs-recurse-ml/spx/spx-linux-x64/spx)
+- **Linux ARM64:** [linux-arm64](https://storage.googleapis.com/docs-recurse-ml/spx/spx-linux-arm64/spx)
+- **Linux x64 (musl):** [linux-x64-musl](https://storage.googleapis.com/docs-recurse-ml/spx/spx-linux-x64-musl/spx)
+- **Linux ARM64 (musl):** [linux-arm64-musl](https://storage.googleapis.com/docs-recurse-ml/spx/spx-linux-arm64-musl/spx)
+- **macOS Intel (x64):** [darwin-x64](https://storage.googleapis.com/docs-recurse-ml/spx/spx-darwin-x64/spx)
+- **macOS Apple Silicon (ARM64):** [darwin-arm64](https://storage.googleapis.com/docs-recurse-ml/spx/spx-darwin-arm64/spx)
+- **Windows x64:** [windows-x64](https://storage.googleapis.com/docs-recurse-ml/spx/spx-windows-x64/spx.exe)
+
+**Troubleshooting:**
+1. If using MacOS Rosetta, download the binary for `darwin-arm64`.
+
+
+**Adding to your PATH:**
+
+After downloading, make the binary executable and add it to your PATH:
+```bash
+# Linux/macOS
+chmod +x spx
+sudo mv spx /usr/local/bin/
+
+# Or add to your user bin directory (no sudo required)
+mkdir -p ~/.local/bin
+mv spx ~/.local/bin/
+# Add to your shell config: export PATH="$HOME/.local/bin:$PATH"
+```
+
+```powershell
+# Windows (PowerShell as Administrator)
+# Move spx.exe to a directory like C:\Program Files\spx\
+# Add that directory to your PATH environment variable
+```
+
+Verify installation:
+```bash
+spx --version
+```
+
+### 2. Create a New Project
+
+Navigate to where you want your project and create a new directory:
+```bash
+mkdir my-spx-project
+cd my-spx-project
+spx init
+```
+
+This initializes a new spx project with the following structure:
+```
+my-spx-project/
+├── specs/              # Your markdown specifications go here
+│   └── example.md      # Starter example spec
+├── .spx/               # Internal spx metadata (don't edit)
+│   └── prev_specs/     # Tracks changes between generations
+├── out/                # Generated code appears here (auto-created on first gen)
+└── .gitignore          # Pre-configured to ignore generated files
+```
+
+**What each directory does:**
+
+- **`specs/`** - Where you write your system specifications in markdown. All `.md` files here are read by spx.
+- **`.spx/`** - Internal tracking data used by spx to detect changes and optimize generation.
+- **`out/`** - Contains generated implementation code. You can read this to understand what was generated, but don't edit it directly - changes will be overwritten.
+
+### 3. Build!
+
+#### Define Specs
+
+Create or edit markdown files in `specs/`.
+spx reads all `.md` files in the `specs/` directory and treats them as the specification for your system.
+
+Principles for writing effective specs:
+
+1. **Be specific about end-user behavior:** clearly define the interfaces (whether CLI or API endpoints) that are exposed to your users.
+2. **Managing granularity:**
+    you're in control of the level of granularity at which you want to work at.
+    For example, if the database engine and schema is important to your design, you should specify them.
+    But if they're not, then LLM will likely make a reasonable guess.
+3. **Out of scope:** explicitly state what's out of scope for now and the limitations you're fine with at the current stage.
+
+
+#### `spx gen`
+
+Once your spec is ready, generate the code:
+```bash
+spx gen
+```
+
+This command:
+- Reads all markdown files from `specs/`
+- Compares them with the previous generation (if any)
+- Uses Claude Code CLI to generate or update code in `out/`
+- Creates/updates `out/build.sh` and `out/run.sh` scripts
+
+**First time:** Generates everything from scratch.
+
+**Subsequent runs:** Only updates what changed in your specs, preserving what still matches.
+
+#### `spx build
+
+- Sets up language-specific environments (virtualenv for Python, npm install for TypeScript, etc.)
+- Installs required libraries
+- Compiles code if necessary (e.g., for Rust or TypeScript)
+
+#### `spx run`
+
+Executes your generated system.
+Any arguments you pass to `spx run` are forwarded to your application's entry point.
+
+#### Iterate
+
+As you develop, update your specs in `specs/` and repeat the cycle.
+spx tracks what changed and only updates relevant parts of your implementation.
+
+## How It Works
+
+spx is a programming language that uses traditional languages (Python, TypeScript, Rust) as intermediary representations.
+You control your system architecture and behavior through specs, not by writing implementation code directly.
+
+## Commands Reference
+
+- `spx init` - Initialize a new spx project
+- `spx gen` - Generate/update implementation code from specs
+- `spx build` - Build the generated code and install dependencies
+- `spx run [args]` - Execute your system (forwards args to your application)
+- `spx clean` - Remove all generated code and build artifacts
+
+## Best Use Cases
+
+spx works best for:
+
+- **Web backends and APIs** - REST/GraphQL servers, microservices
+- **CLI tools and scripts** - Command-line utilities, automation scripts  
+- **ML pipelines** - Training scripts, data processing, inference servers
+
+spx is designed for non-visual backend systems. For applications with significant UI components, traditional development approaches may be more suitable.
+
+## Getting Help
+
+- **Discord:** [Join our community](https://discord.gg/n3SsVDAW6U)
+- **Email:** armin (at) recurse (dot) ml
+- **Issues:** Share bugs, unexpected behavior, or cases where spec-level fixes weren't sufficient
+
+Your feedback directly shapes spx development!

@@ -1,28 +1,12 @@
 {
   "hosting": {
-    "public": "build",
+    "public": "out",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
-        "source": "/sitemap.xml",
-        "destination": "/sitemap.xml"
-      },
-      {
-        "source": "/robots.txt",
-        "destination": "/robots.txt"
-      },
-      {
-        "source": "/favicon.ico",
-        "destination": "/favicon.ico"
-      },
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+    "cleanUrls": true,
+    "trailingSlash": false
   }
 }

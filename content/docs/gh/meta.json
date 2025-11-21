@@ -1,0 +1,12 @@
+{
+  "title": "GitHub App",
+  "icon": "Github",
+  "pages": [
+    "index",
+    "installation",
+    "---Configurations---",
+    "configs",
+    "---Support---",
+    "help-and-support"
+  ]
+}

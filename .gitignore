@@ -3,10 +3,17 @@
 
 # Production
 /build
+/out
+
+# Next.js
+/.next/
+.next
+.turbo
 
 # Generated files
 .docusaurus
 .cache-loader
+.source
 
 # Misc
 .DS_Store
@@ -21,3 +28,7 @@ yarn-error.log*
 
 .firebase
 .vscode
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

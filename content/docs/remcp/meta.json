@@ -1,0 +1,9 @@
+{
+  "title": "REMCP",
+  "icon": "Plug",
+  "pages": [
+    "index",
+    "---Installation---",
+    "installation"
+  ]
+}

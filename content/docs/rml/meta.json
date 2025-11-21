@@ -1,0 +1,14 @@
+{
+  "title": "RML CLI",
+  "icon": "Terminal",
+  "pages": [
+    "index",
+    "---Getting Started---",
+    "getting-started",
+    "cli-reference",
+    "---Configurations---",
+    "configs",
+    "---Support---",
+    "help-and-support"
+  ]
+}

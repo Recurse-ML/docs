@@ -1,0 +1,39 @@
+---
+slug: /
+title: Getting Started
+sidebar_position: 0
+---
+# Quick Install
+
+**One-line install (macOS and Linux)**
+```
+curl -L remcp.recurse.ml | bash
+```
+
+📝 Next steps:
+1. Make sure `$HOME/.local/bin` is in your `PATH`. Add to `~/.bashrc` or `~/.zshrc`: 
+
+```
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+2. Authenticate with GitHub: 
+
+```
+remcp auth
+```
+
+3. Choose your IDE and follow the installation instructions:
+
+- [Install in Claude Code](./installation/install-claude-code)
+- [Install in Cursor](./installation/install-cursor)
+
+# Usage tips
+
+### Recurse prompt (recommended)
+
+```
+# In claude code
+$ /recurse:review_code Please implement access control on web api endpoints
+```
+The prompt is automatically available once you install remcp, and claude will start using Recurse MCP for analyzing code changes.
