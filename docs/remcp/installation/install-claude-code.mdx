@@ -1,0 +1,31 @@
+---
+slug: install-claude-code
+title: Install in Claude Code
+sidebar_position: 1
+---
+# Install in Claude Code
+
+## Step 1: Add MCP to claude
+
+
+```
+claude mcp add recurse --scope user -- remcp serve
+```
+
+## Step 2: Install hooks
+
+
+```bash
+remcp configure claude
+```
+
+This installs a SessionStart hook that automatically reminds Claude to use remcp. This is a global configuration for Claude.
+
+## Removing the Configuration
+
+If you are not happy with the hook, you can remove it using:
+
+```bash
+remcp configure --remove claude
+```
+
