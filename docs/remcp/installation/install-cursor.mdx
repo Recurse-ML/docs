@@ -23,18 +23,20 @@ Add the following user rule in your Cursor settings:
 
 ```yaml
 ---
-name: Verify Changes Using Recurse ML MCP
+name: Verify Changes Using REMCP
 
 globs: "**/*.{js,ts,py,rs,go,java,rb,cs,tsx,jsx}"
 
 alwaysApply: true
 
-description: Use Recurse ML MCP to verify your work. Before making changes, call init() on the project if not already done. Once all changes are done, call check() to get bug reports.
+description: Use REMCP to verify your work. Before making changes, call init() on the project if not already done. Once all changes are done, call check() to get bug reports.
 ---
+
+> **Note:** Rules in this section are managed by Recurse ML. Any changes made will be overwritten when pulling new rule updates.
 
 # Verify Changes Using Recurse ML MCP
 
-Use Recurse ML MCP to verify your work while completing tasks. Before making any changes, call `init()` on the project if not already done. Once all changes are done, call `check()` to get bug reports.
+Use REMCP to verify your work while completing tasks. Before making any changes, call `init()` on the project if not already done. Once all changes are done, call `check()` to get bug reports.
 
 ## Do
 
@@ -52,7 +54,7 @@ Use Recurse ML MCP to verify your work while completing tasks. Before making any
 
 ## MCP Usage
 
-The Recurse ML MCP provides the following tools:
+The REMCP provides the following tools:
 
 - `mcp_recurse_init(repo_path)`: Initialize a codebase for analysis. Sets up the project for continuous analysis by performing health checks, creating a project entry in the database, and starting the background worker (if not already running).
 
@@ -70,7 +72,7 @@ The Recurse ML MCP provides the following tools:
 4. **If analysis is pending**: Wait a moment and call `check()` again until the analysis completes.
 5. **When making a code change**: Clearly state that the change is being made as a result of a bug found by REMCP and state what the bug is.
 
-End of rule: Verify Changes Using Recurse ML MCP
+<!-- End of rule: Verify Changes Using REMCP -->
 ```
 
 </details>
