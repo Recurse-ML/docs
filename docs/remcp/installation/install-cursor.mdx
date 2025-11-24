@@ -48,6 +48,7 @@ Use Recurse ML MCP to verify your work while completing tasks. Before making any
 1. DON'T skip initialization - always call `init()` before starting work.
 2. DON'T forget to call `check()` after completing changes.
 3. DON'T ignore bug reports without investigating them first.
+4. DON'T finish a task without receiving a complete analysis from REMCP, wait for 30 seconds and retry the check, communicating clearly that you are awaiting the complete analysis.
 
 ## MCP Usage
 
@@ -67,6 +68,9 @@ The Recurse ML MCP provides the following tools:
 2. **After completing changes**: Call `mcp_recurse_check()` with the project_id returned from init().
 3. **If bugs are found**: Review the bug reports, verify whether they are valid, and fix them.
 4. **If analysis is pending**: Wait a moment and call `check()` again until the analysis completes.
+5. **When making a code change**: Clearly state that the change is being made as a result of a bug found by REMCP and state what the bug is.
+
+End of rule: Verify Changes Using Recurse ML MCP
 ```
 
 </details>
