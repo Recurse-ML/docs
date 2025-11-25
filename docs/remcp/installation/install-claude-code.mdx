@@ -19,11 +19,11 @@ claude mcp add recurse --scope user -- remcp serve
 remcp configure claude
 ```
 
-This installs instructions that reminds Claude to use remcp. This is a global configuration for Claude.
+This installs a global rule in your CLAUDE.md file that ensures Claude Code uses remcp automatically.
 
 ## Removing the Configuration
 
-If you are not happy with the instructions, you can remove it using:
+If you want to remove the global rule and prefer to call remcp directly, you can run the following command:
 
 ```bash
 remcp configure --remove claude
