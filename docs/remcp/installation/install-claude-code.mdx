@@ -12,18 +12,18 @@ sidebar_position: 1
 claude mcp add recurse --scope user -- remcp serve
 ```
 
-## Step 2: Install hooks
+## Step 2: Configure CLAUDE.md
 
 
 ```bash
 remcp configure claude
 ```
 
-This installs a SessionStart hook that automatically reminds Claude to use remcp. This is a global configuration for Claude.
+This installs a global rule in your CLAUDE.md file that ensures Claude Code uses remcp automatically.
 
 ## Removing the Configuration
 
-If you are not happy with the hook, you can remove it using:
+If you want to remove the global rule and prefer to call remcp directly, you can run the following command:
 
 ```bash
 remcp configure --remove claude
