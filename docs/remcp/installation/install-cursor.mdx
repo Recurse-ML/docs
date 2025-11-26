@@ -32,18 +32,18 @@ alwaysApply: true
 description: Use REMCP to verify your work. Before making changes, call init() on the project if not already done. Once all changes are done, call check() to get bug reports.
 ---
 
-> **Note:** Rules in this section are managed by Recurse ML. Any changes made will be overwritten when pulling new rule updates.
+> **Note:** Rules in this section are managed by REMCP. Any changes made will be overwritten when pulling new rule updates.
 
-# Verify Changes Using Recurse ML MCP
+# Verify Changes Using REMCP
 
 Use REMCP to verify your work while completing tasks. Before making any changes, call `init()` on the project if not already done. Once all changes are done, call `check()` to get bug reports.
 
 ## Do
 
-1. Call `mcp_recurse_init()` before making changes to initialize the project for analysis.
-2. Call `mcp_recurse_check()` after completing your changes to get bug reports.
+1. Call `mcp_remcp_init()` before making changes to initialize the project for analysis.
+2. Call `mcp_remcp_check()` after completing your changes to get bug reports.
 3. Investigate the bug reports and fix valid issues.
-4. Use `mcp_recurse_ignore_issue()` if you're aware of an issue but choose not to address it.
+4. Use `mcp_remcp_ignore_issue()` if you're aware of an issue but choose not to address it.
 
 ## Don't
 
@@ -56,18 +56,18 @@ Use REMCP to verify your work while completing tasks. Before making any changes,
 
 The REMCP provides the following tools:
 
-- `mcp_recurse_init(repo_path)`: Initialize a codebase for analysis. Sets up the project for continuous analysis by performing health checks, creating a project entry in the database, and starting the background worker (if not already running).
+- `mcp_remcp_init(repo_path)`: Initialize a codebase for analysis. Sets up the project for continuous analysis by performing health checks, creating a project entry in the database, and starting the background worker (if not already running).
 
-- `mcp_recurse_check(project_id)`: Check the status of the latest analysis and retrieve any issues found. This should be fast (<1s) as it just reads from the database. The tool might report that an analysis is pending, which means you need to call it again in some time until it says that the analysis either succeeded or errored out.
+- `mcp_remcp_check(project_id)`: Check the status of the latest analysis and retrieve any issues found. This should be fast (<1s) as it just reads from the database. The tool might report that an analysis is pending, which means you need to call it again in some time until it says that the analysis either succeeded or errored out.
 
-- `mcp_recurse_ignore_issue(issue_id)`: Indicate that you're aware of an issue but choose not to address it.
+- `mcp_remcp_ignore_issue(issue_id)`: Indicate that you're aware of an issue but choose not to address it.
 
-- `mcp_recurse_doctor()`: Run diagnostic checks to troubleshoot installation and configuration issues.
+- `mcp_remcp_doctor()`: Run diagnostic checks to troubleshoot installation and configuration issues.
 
 ## Workflow
 
-1. **Before making changes**: Call `mcp_recurse_init()` with the absolute path to the repository root.
-2. **After completing changes**: Call `mcp_recurse_check()` with the project_id returned from init().
+1. **Before making changes**: Call `mcp_remcp_init()` with the absolute path to the repository root.
+2. **After completing changes**: Call `mcp_remcp_check()` with the project_id returned from init().
 3. **If bugs are found**: Review the bug reports, verify whether they are valid, and fix them.
 4. **If analysis is pending**: Wait a moment and call `check()` again until the analysis completes.
 5. **When making a code change**: Clearly state that the change is being made as a result of a bug found by REMCP and state what the bug is.
